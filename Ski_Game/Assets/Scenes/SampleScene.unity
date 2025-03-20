@@ -984,8 +984,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 200
   turnSpeed: 100
+  minSpeed: 0
+  maxSpeed: 1000
+  minAcceleration: 0
+  maxAcceleration: 300
   leftInput: 97
   rightInput: 100
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  groundTransform: {fileID: 489912258}
+--- !u!4 &489912258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4335157640701538008, guid: 079d8e1325f92924690275cc28f21b1b, type: 3}
+  m_PrefabInstance: {fileID: 477619221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &511658983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9037381300153515870, guid: 006db0bb6c947394c988fe7797f8bb38, type: 3}
@@ -1751,6 +1764,10 @@ PrefabInstance:
     - target: {fileID: 923893714876022436, guid: ead035a147c4a6d408c59ab1b75e99da, type: 3}
       propertyPath: m_Name
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 923893714876022436, guid: ead035a147c4a6d408c59ab1b75e99da, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 923893714876022437, guid: ead035a147c4a6d408c59ab1b75e99da, type: 3}
       propertyPath: m_Mesh
@@ -5158,6 +5175,10 @@ PrefabInstance:
     - target: {fileID: 2693573932408249071, guid: 11ad6071766f6d5428a83259fef12ec1, type: 3}
       propertyPath: m_Name
       value: Slope
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693573932408249071, guid: 11ad6071766f6d5428a83259fef12ec1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
