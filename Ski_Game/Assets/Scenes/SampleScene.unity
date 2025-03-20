@@ -986,7 +986,7 @@ MonoBehaviour:
   turnSpeed: 100
   minSpeed: 0
   maxSpeed: 1000
-  minAcceleration: 0
+  minAcceleration: -200
   maxAcceleration: 300
   leftInput: 97
   rightInput: 100

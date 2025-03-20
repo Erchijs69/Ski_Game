@@ -11,11 +11,13 @@ public class PlayerMovement : MonoBehaviour
     
     private float speed = 0;
     private Rigidbody rb;
+    private Animator animator;
 
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         acceleration = Remap(0, 90, maxAcceleration, minAcceleration, angle);
         speed += acceleration * Time.deltaTime;
         speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
+        animator.SetFloat("playerSpeed", speed);
         Vector3 velocity = transform.forward * speed * Time.fixedDeltaTime;
         rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
     }
