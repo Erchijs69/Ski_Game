@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishGate : MonoBehaviour
+public class FinishRace : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.CompareTag("Player"))
+            GameEvents.CallRaceFinish();
     }
 }
+
+
