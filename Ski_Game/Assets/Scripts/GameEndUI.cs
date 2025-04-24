@@ -11,6 +11,7 @@ public class GameEndUI : MonoBehaviour
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private Image crossfade;
     [SerializeField] private int nextLevelIndex = 1;
+    [SerializeField] private LeaderboardUI leaderboardUI;
 
     public void Start()
     {
@@ -33,6 +34,7 @@ public class GameEndUI : MonoBehaviour
     private void EnableGameOver()
     {
         gameOverMenu.SetActive(true);
+        leaderboardUI.UpdateLeaderboard(); 
     }
 
     public void QuitButton()
@@ -75,5 +77,7 @@ public class GameEndUI : MonoBehaviour
         yield return new WaitForSeconds(1);
         Application.Quit();
     }
+
+
 }
 
